@@ -19,7 +19,7 @@ export const FinancialDetails = ({ movieDetails }) => {
   ];
 
   return (
-    <div className={styles.movieDetailsContainer}>
+    <div className={styles.movieDetailsCellContainer}>
       {financialDetails.map((financialDetail) => (
         <FinancialDetailsCell
           key={financialDetail.title}

@@ -10,7 +10,7 @@ export const RatingDetails = ({ movieDetails }) => {
   const [hover, setHover] = useState(0);
 
   return (
-    <div className={styles.movieDetailsContainer}>
+    <div className={styles.movieDetailsCellContainer}>
       <div className={styles.movieDetail}>
         <h5>Communauté</h5>
         <div>

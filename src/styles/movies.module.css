@@ -1,17 +1,17 @@
-.mainm {
+.movieContainer {
   display: flex;
   flex-direction: row;
   gap: 2rem;
   padding: 1rem 10rem;
 }
 
-.Textdetails {
+.movieDetailsContainer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.movieDetailsContainer {
+.movieDetailsCellContainer {
   display: flex;
   flex-direction: row;
   gap: 5rem;
@@ -57,4 +57,14 @@
 
 .synopsis p {
   text-align: justify;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title p {
+  color: rgb(85, 143, 252);
 }

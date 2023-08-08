@@ -1,42 +1,33 @@
 import { useSelector } from "react-redux";
 import Image from "next/image";
 
-import { SynopsisDetails } from "./SynopsisDetails";
 import { FinancialDetails } from "./FinancialDetails";
 import { RatingDetails } from "./RatingDetails";
+import { SynopsisDetails } from "./SynopsisDetails";
+import { TitleDetails } from "./TitleDetails";
 
 import styles from "@/styles/movies.module.css";
 
+//TODO
 const getImageUrl = (path) => {
   return `https://image.tmdb.org/t/p/original/${path}`;
 };
 
-const formatDate = (date) => {
-  return date.split("-")[0];
-};
-
 export default function MovieDetails() {
   const movieDetails = useSelector((state) => state.movieDetails);
+  const poster_path = getImageUrl(movieDetails.poster_path);
 
   return (
-    <div className={styles.mainm}>
+    <div className={styles.movieContainer}>
       <Image
-        src={getImageUrl(movieDetails.poster_path)}
-        alt="movie poster"
+        src={poster_path}
+        alt={movieDetails.title + "poster"}
         width={275}
         height={400}
         className={styles.poster}
       />
-      <div className={styles.Textdetails}>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <h2>{movieDetails.title}</h2>
-          <p>
-            {"("}
-            {formatDate(movieDetails.release_date)}
-            {")"}
-          </p>
-        </div>
-
+      <div className={styles.movieDetailsContainer}>
+        <TitleDetails movieDetails={movieDetails} />
         <FinancialDetails movieDetails={movieDetails} />
         <SynopsisDetails movieDetails={movieDetails} />
         <RatingDetails movieDetails={movieDetails} />

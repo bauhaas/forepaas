@@ -1,16 +1,10 @@
-.mainm {
+.pageContainer {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* padding: 6rem; */
-  /* min-height: 100vh; */
-  /* add red border*/
-  gap: 1rem;
-  padding: 2rem 10rem;
+  gap: 2rem;
+  padding: 1rem 10rem;
 }
 
-/* Style the label containing the icon and input */
 .search {
   position: relative;
   display: flex;
@@ -32,7 +26,7 @@
   outline: none;
 }
 
-.f {
+.title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

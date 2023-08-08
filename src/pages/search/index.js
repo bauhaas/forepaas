@@ -1,46 +1,23 @@
-import MovieCard from "@/components/MovieCard";
-import { useSelector, useDispatch } from "react-redux";
-import styles from "@/styles/search.module.css";
-import { setMovieDetails } from "@/store/reducers/movieDetails";
-import { useRouter } from "next/router";
-import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
-const MovieList = ({ movies }) => {
-  const router = useRouter();
-  const dispatch = useDispatch();
+import { MovieList } from "./MovieList";
 
-  const goToMovieDetails = (movie) => {
-    console.log("test");
-    dispatch(setMovieDetails(movie));
-    router.push(`/movie/${movie.id}`);
-  };
-
-  return (
-    <ul className={styles.gridcontainer}>
-      {movies.map((movie) => (
-        <li key={movie.id} onClick={() => goToMovieDetails(movie)}>
-          <MovieCard movie={movie} />
-        </li>
-      ))}
-    </ul>
-  );
-};
+import styles from "@/styles/search.module.css";
 
 export default function Search() {
   const movies = useSelector((state) => state.movies);
 
-  // Step 1: Create a state variable for the search query
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Step 3: Filter movies based on the search query
   const filteredMovies = movies.filter((movie) =>
     movie.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
-    <div className={styles.mainm}>
-      <div className={styles.f}>
+    <div className={styles.pageContainer}>
+      <div className={styles.title}>
         <h1>Tous les films</h1>
         <label className={styles.search}>
           <Image

@@ -1,0 +1,25 @@
+.headerStyle {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 10rem;
+  /* background: transparent; */
+  border: 2px solid red;
+}
+
+.linksContainerStyle {
+  display: flex;
+  gap: 10px;
+}
+
+.linkStyle {
+  color: #3700ff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.activeLink {
+  color: white;
+}

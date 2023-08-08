@@ -1,0 +1,34 @@
+.mainDetails {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 200px;
+  /* margin: 0.5rem; */
+}
+
+.mainDetails p {
+  font-weight: 200; /* Set the font weight to light (300) */
+}
+
+.mainDetails h4 {
+  white-space: nowrap; /* Prevent line breaks within the title */
+  overflow: hidden; /* Hide the overflowing content */
+  text-overflow: ellipsis; /* Show ellipsis (...) when text overflows */
+  max-width: 100px; /* Adjust the width as needed to fit your layout */
+}
+
+.poster {
+  border-radius: 5%;
+}
+
+.cardContainer:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.178);
+  border-radius: 5%;
+}
+
+.cardContainer {
+  /* width: 100%; */
+  padding: 1rem;
+}

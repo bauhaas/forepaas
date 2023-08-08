@@ -1,0 +1,51 @@
+.mainm {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* padding: 6rem; */
+  /* min-height: 100vh; */
+  /* add red border*/
+  gap: 1rem;
+  padding: 2rem 10rem;
+}
+
+/* Style the label containing the icon and input */
+.search {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid #7bb0ff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: text;
+  gap: 5px;
+  background-color: transparent;
+}
+
+.search input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.f {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.gridcontainer {
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(calc(20% - 20px), 1fr)
+  ); /* Each item takes 20% of the container minus 20px for gap */
+  gap: 20px; /* Adjust the gap between grid items as needed */
+}

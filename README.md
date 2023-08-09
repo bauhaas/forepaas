@@ -26,7 +26,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 **Page accueil :**
 
-Pour le chart, je n'ai pas eu le temps nécessaire pour gérer la séléction de filtre par années / genres. Les données de ce chart correspondent aux films ayant fait le plus de revenue au global (diffère donc du 1er call api pour avoir les plus populaires). Au niveau de l'affichage, tout ne tient pas d'un seul tenant (chart + films populaires) mais je voulais garder un affichage décent des affiches de films.
+Pour le chart, je n'ai pas eu le temps nécessaire pour gérer la sélection de filtre par années / genres. Les données de ce chart correspondent aux films ayant fait le plus de revenue au global (diffère donc du 1er call api pour avoir les plus populaires). Au niveau de l'affichage, tout ne tient pas d'un seul tenant (chart + films populaires) mais je voulais garder un affichage décent des affiches de films.
 
 **Page recherche :**
 
@@ -43,6 +43,7 @@ De manière plus générale, le projet était assez sympa à réaliser. Je conna
 Pour les points d'améliorations:
 
 - mon call api que je répète à chaque fois sur la page d'accueil
-- Mes states redux ne sont pas persistent. Tant que l'on navigue normalement sur l'app, tout est ok. Si l'on souhaite accèder directement via l'url à `localhost:3000/search` ou `localhost:3000/movie/{id}` je vais avoir une erreur car l'affichage se base sur mon state contenant les données de mes films.
+- Mes states redux ne sont pas persistent. Tant que l'on navigue normalement sur l'app, tout est ok. Si l'on souhaite accéder directement via l'url à `localhost:3000/search` ou `localhost:3000/movie/{id}` je vais avoir une erreur car l'affichage se base sur mon state contenant les données de mes films.
 - l'organisation du css qui peut être plus propre (partie sur laquelle ou j'ai passé le moins de temps + dernièrement j'ai principalement travaillé avec tailwind)
 - ajouter un squelette sur le layout de mes pages le temps de load toutes mes données
+- clé api dans l'env push sur le repo

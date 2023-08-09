@@ -1,18 +1,7 @@
-import { MoveDown, MoveUp } from "lucide-react";
-
-import styles from "@/styles/movies.module.css";
 import { Profit } from "@/components/Profit";
+import { formatProfit } from "@/utils/movies";
 
-//TODO
-const formatProfit = (n) => {
-  if (n >= 1000000) {
-    return (n / 1000000).toFixed(1) + " M$";
-  } else if (n >= 1000) {
-    return (n / 1000).toFixed(1) + " K$";
-  } else {
-    return n.toString();
-  }
-};
+import styles from "@/styles/pages/movies.module.css";
 
 export const FinancialDetailsCell = (props) => {
   const formattedProfit = formatProfit(props.value);

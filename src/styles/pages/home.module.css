@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 10rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--secondary-text);
+}
+
+.homeLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  color: var(--secondary-text);
+}
+
+.chartsContainer {
+  width: 500px;
+  height: 500px;
+  min-width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25%, auto));
+  width: var(--max-width);
+  max-width: 100%;
+}

@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Header.module.css";
 import { usePathname } from "next/navigation";
+
+import styles from "../styles/components/Header.module.css";
 
 const Header = () => {
   const urlPathName = usePathname();

@@ -6,12 +6,11 @@ export const getPopularMovies = async () => {
       `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.TMDB_API_KEY}&language=fr-FR`
     );
 
-    const sortedResults = response.data.results.sort(
+    const moviesSortedByReleaseDate = response.data.results.sort(
       (a, b) => new Date(b.release_date) - new Date(a.release_date)
     );
 
-    console.log(sortedResults);
-    return sortedResults;
+    return moviesSortedByReleaseDate;
   } catch (error) {
     throw new Error("Error fetching popular movies");
   }

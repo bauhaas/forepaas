@@ -1,9 +1,9 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import MovieCard from "@/components/MovieCard";
 import { setMovieDetails } from "@/store/reducers/movieDetails";
 import { useRouter } from "next/router";
 
-import styles from "@/styles/search.module.css";
+import styles from "@/styles/pages/search.module.css";
 
 export const MovieList = ({ movies }) => {
   const router = useRouter();

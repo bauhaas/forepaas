@@ -1,20 +1,14 @@
 "use client";
 
+import { formatProfit } from "@/utils/movies";
 import Image from "next/image";
-import styles from "../styles/MovieCard.module.css";
 import { Profit } from "./Profit";
 
-const formatProfit = (n) => {
-  if (n >= 1000000 || n <= -1000000) {
-    return Math.floor(n / 1000000) + " M$";
-  } else if (n >= 1000 || n <= -1000) {
-    return Math.floor(n / 1000) + " K$";
-  } else {
-    return Math.floor(n).toString();
-  }
-};
+import styles from "../styles/components/MovieCard.module.css";
 
 const MovieCard = ({ movie }) => {
+  const formattedProfit = formatProfit(movie.profit);
+
   return (
     <div className={styles.cardContainer}>
       <Image
@@ -28,10 +22,7 @@ const MovieCard = ({ movie }) => {
       <div className={styles.mainDetails}>
         <div className={styles.headerDetails}>
           <p className={styles.mainDetailsTitle}>{movie.title}</p>
-          <Profit
-            value={movie.profit}
-            formattedProfit={formatProfit(movie.profit)}
-          />
+          <Profit value={movie.profit} formattedProfit={formattedProfit} />
         </div>
         <p className={styles.release_date}>{movie.release_date}</p>
       </div>

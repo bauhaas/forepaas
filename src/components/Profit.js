@@ -1,5 +1,6 @@
 import { MoveDown, MoveUp } from "lucide-react";
-import styles from "../styles/Profit.module.css";
+
+import styles from "../styles/components/Profit.module.css";
 
 export const Profit = ({ value, formattedProfit }) => {
   const isPositive = value > 0;

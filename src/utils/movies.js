@@ -14,3 +14,13 @@ export const formatMovieDetails = (movieDetails) => {
     };
   });
 };
+
+export const formatProfit = (n) => {
+  if (n >= 1000000 || n <= -1000000) {
+    return Math.floor(n / 1000000) + " M$";
+  } else if (n >= 1000 || n <= -1000) {
+    return Math.floor(n / 1000) + " K$";
+  } else {
+    return Math.floor(n).toString();
+  }
+};

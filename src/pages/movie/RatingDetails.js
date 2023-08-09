@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Star } from "lucide-react";
 
-import styles from "@/styles/movies.module.css";
+import styles from "@/styles/pages/movies.module.css";
 
 export const RatingDetails = ({ movieDetails }) => {
   const filledStars = Math.min(5, (movieDetails.vote_average / 2) % 5);

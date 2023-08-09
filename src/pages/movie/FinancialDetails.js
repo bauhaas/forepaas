@@ -1,6 +1,6 @@
 import { FinancialDetailsCell } from "./FinancialDetailsCell";
 
-import styles from "@/styles/movies.module.css";
+import styles from "@/styles/pages/movies.module.css";
 
 export const FinancialDetails = ({ movieDetails }) => {
   const financialDetails = [

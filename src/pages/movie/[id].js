@@ -6,9 +6,8 @@ import { RatingDetails } from "./RatingDetails";
 import { SynopsisDetails } from "./SynopsisDetails";
 import { TitleDetails } from "./TitleDetails";
 
-import styles from "@/styles/movies.module.css";
+import styles from "@/styles/pages/movies.module.css";
 
-//TODO
 const getImageUrl = (path) => {
   return `https://image.tmdb.org/t/p/original/${path}`;
 };

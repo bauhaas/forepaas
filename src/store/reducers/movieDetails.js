@@ -1,4 +1,3 @@
-// store/reducers/movieDetails.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const movieDetailsSlice = createSlice({
@@ -6,7 +5,6 @@ const movieDetailsSlice = createSlice({
   initialState: {},
   reducers: {
     setMovieDetails(state, action) {
-      // action.payload will contain the movie details
       return action.payload;
     },
     clearMovieDetails(state) {

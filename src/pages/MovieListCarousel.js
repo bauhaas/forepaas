@@ -1,11 +1,12 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import MovieCard from "@/components/MovieCard";
 import { setMovieDetails } from "@/store/reducers/movieDetails";
 import { useRouter } from "next/router";
 
-import styles from "@/styles/MovieListCarousel.module.css";
 import { useState } from "react";
 import Image from "next/image";
+
+import styles from "@/styles/components/MovieListCarousel.module.css";
 
 export const MovieListCarousel = ({ movies }) => {
   const router = useRouter();

@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 import { MovieList } from "./MovieList";
 
-import styles from "@/styles/search.module.css";
+import styles from "@/styles/pages/search.module.css";
 
 export default function Search() {
   const movies = useSelector((state) => state.movies);

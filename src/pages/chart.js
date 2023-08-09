@@ -1,26 +1,19 @@
-import styles from "@/styles/Home.module.css";
-
-import Link from "next/link";
-import PopularMovies from "./PopularMovies";
 import {
   ComposedChart,
-  LineChart,
   Line,
-  Area,
   Bar,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
   Legend,
-  Scatter,
   ResponsiveContainer,
-  CartesianAxis,
 } from "recharts";
-import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { formatDate } from "@/utils/movies";
+
+import styles from "@/styles/pages/home.module.css";
 
 const useMostProfitableMovies = () => {};
 

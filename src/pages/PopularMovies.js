@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { MovieList } from "./search/MovieList";
 import { getMovieById, getPopularMovies } from "./api/movies";
 import { formatMovieDetails } from "@/utils/movies";
+import { MovieListCarousel } from "./MovieListCarousel";
 
 const usePopularMovies = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -49,7 +50,7 @@ const PopularMovies = () => {
       <h2 className={styles.title}>
         Les 10 films les plus populaires du moment
       </h2>
-      <MovieList movies={popularMovies} />
+      <MovieListCarousel movies={popularMovies} />
     </div>
   );
 };

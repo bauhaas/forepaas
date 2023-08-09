@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Star } from "lucide-react";
 
 import styles from "@/styles/movies.module.css";
@@ -6,8 +6,14 @@ import styles from "@/styles/movies.module.css";
 export const RatingDetails = ({ movieDetails }) => {
   const filledStars = Math.min(5, (movieDetails.vote_average / 2) % 5);
 
-  const [rating, setRating] = useState(0);
+  const initialRating =
+    parseInt(localStorage.getItem(`movieRating_${movieDetails.id}`)) || 0;
+  const [rating, setRating] = useState(initialRating);
   const [hover, setHover] = useState(0);
+
+  useEffect(() => {
+    localStorage.setItem(`movieRating_${movieDetails.id}`, rating);
+  }, [movieDetails.id, rating]);
 
   return (
     <div className={styles.movieDetailsCellContainer}>

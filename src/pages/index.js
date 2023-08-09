@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PopularMovies from "./PopularMovies";
-import { Chart } from "./chart";
+import { Chart } from "./Chart";
 
 import styles from "@/styles/pages/home.module.css";
 

@@ -22,17 +22,27 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+**Page accueil :**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Pour le chart, je n'ai pas eu le temps nécessaire pour gérer la séléction de filtre par années / genres. Les données de ce chart correspondent aux films ayant fait le plus de revenue au global (diffère donc du 1er call api pour avoir les plus populaires). Au niveau de l'affichage, tout ne tient pas d'un seul tenant (chart + films populaires) mais je voulais garder un affichage décent des affiches de films.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Page recherche :**
 
-## Deploy on Vercel
+.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Page détail :**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Concernant le système de notation, j'ai choisi de sauvegarder la note que l'on attribue à chaque film dans le localStorage. Techniquement c'est pas l'endroit le plus approprié. En temps normal, il faudrait qu'on sauvegarde cette valeur en base de donnée. Cela me semblait plus approprié
+
+---
+
+De manière plus générale, le projet était assez sympa à réaliser. Je connaissais déjà un peu le fonctionnement de tmdb donc ça à pu m'aider pour débuter plus facilement. J'ai tenté de découper au maximum mes composants ainsi que d'abstraire le maximum de logique de code de mes composants. Je n'ai pas forcément eu le temps d'aller aussi loin que ce que je voulais mais j'ai fais au mieux.
+
+Pour les points d'améliorations:
+
+- mon call api que je répète à chaque fois sur la page d'accueil
+- Mes states redux ne sont pas persistent. Tant que l'on navigue normalement sur l'app, tout est ok. Si l'on souhaite accèder directement via l'url à `localhost:3000/search` ou `localhost:3000/movie/{id}` je vais avoir une erreur car l'affichage se base sur mon state contenant les données de mes films.
+- l'organisation du css qui peut être plus propre (partie sur laquelle ou j'ai passé le moins de temps + dernièrement j'ai principalement travaillé avec tailwind)
+- ajouter un squelette sur le layout de mes pages le temps de load toutes mes données

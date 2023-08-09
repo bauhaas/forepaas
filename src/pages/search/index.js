@@ -16,14 +16,14 @@ export default function Search() {
   );
 
   return (
-    <div className={styles.pageContainer}>
+    <main className={styles.pageContainer}>
       <div className={styles.title}>
-        <h1>Tous les films</h1>
+        <h2>Tous les films</h2>
         <label className={styles.search}>
           <Image
             src="/searchicon.png"
-            width={25}
-            height={25}
+            width={12}
+            height={12}
             alt="Search Icon"
           />
           <input
@@ -35,6 +35,6 @@ export default function Search() {
         </label>
       </div>
       <MovieList movies={filteredMovies} />
-    </div>
+    </main>
   );
 }

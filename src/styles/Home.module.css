@@ -1,12 +1,21 @@
 .main {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* padding: 6rem; */
-  /* min-height: 100vh; */
   gap: 2rem;
   padding: 1rem 10rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--secondary-text); /* Adjust the color and style as needed */
 }
 
 .homeLink {
@@ -14,7 +23,7 @@
   justify-content: center;
   align-items: center;
   margin: 1rem 0;
-  color: #7bb0ff;
+  color: var(--secondary-text);
 }
 
 /* .charts {

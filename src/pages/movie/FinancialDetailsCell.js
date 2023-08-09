@@ -1,39 +1,29 @@
 import { MoveDown, MoveUp } from "lucide-react";
 
 import styles from "@/styles/movies.module.css";
+import { Profit } from "@/components/Profit";
 
 //TODO
-const convertNumber = (number) => {
-  if (number >= 1000000) {
-    return (number / 1000000).toFixed(1) + " M$";
-  } else if (number >= 1000) {
-    return (number / 1000).toFixed(1) + " K$";
+const formatProfit = (n) => {
+  if (n >= 1000000) {
+    return (n / 1000000).toFixed(1) + " M$";
+  } else if (n >= 1000) {
+    return (n / 1000).toFixed(1) + " K$";
   } else {
-    return number.toString();
+    return n.toString();
   }
 };
 
 export const FinancialDetailsCell = (props) => {
+  const formattedProfit = formatProfit(props.value);
+
   return (
     <div className={styles.movieDetail}>
-      <h5>{props.title}</h5>
+      <h5 className="secondaryText">{props.title}</h5>
       {props.title === "Recettes" ? (
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          {props.value > 0 ? (
-            <MoveUp color="green" />
-          ) : (
-            <MoveDown color="red" />
-          )}
-          <p
-            style={{
-              color: props.value > 0 ? "green" : "red",
-            }}
-          >
-            {convertNumber(props.value)}
-          </p>
-        </div>
+        <Profit value={props.value} formattedProfit={formattedProfit} />
       ) : (
-        <p>{convertNumber(props.value)}</p>
+        <p>{formattedProfit}</p>
       )}
     </div>
   );

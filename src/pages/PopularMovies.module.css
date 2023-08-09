@@ -1,6 +1,11 @@
-.mainm {
+.flexCol {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  margin: 0 1rem;
 }
 
 .gridcontainer {

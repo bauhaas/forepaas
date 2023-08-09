@@ -12,7 +12,7 @@ export const RatingDetails = ({ movieDetails }) => {
   return (
     <div className={styles.movieDetailsCellContainer}>
       <div className={styles.movieDetail}>
-        <h5>Communauté</h5>
+        <h5 className="secondaryText">Communauté</h5>
         <div>
           <div style={{ display: "flex" }}>
             {[...Array(5)].map((_, index) => (
@@ -20,7 +20,7 @@ export const RatingDetails = ({ movieDetails }) => {
                 key={index}
                 size={24}
                 style={{
-                  fill: index < filledStars ? "black" : "transparent",
+                  fill: index < filledStars ? "white" : "transparent",
                 }}
               />
             ))}
@@ -29,7 +29,7 @@ export const RatingDetails = ({ movieDetails }) => {
       </div>
 
       <div className={styles.movieDetail}>
-        <h5>Ma note</h5>
+        <h5 className="secondaryText">Ma note</h5>
         <div>
           <div style={{ display: "flex" }}>
             {[...Array(5)].map((_, index) => {

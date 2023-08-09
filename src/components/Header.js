@@ -14,19 +14,17 @@ const Header = () => {
 
   return (
     <header className={styles.headerStyle}>
-      <div>
-        <Link href="/">
-          <Image
-            src="/movie-finder.png"
-            alt="Logo"
-            width={400}
-            height={40}
-            layout={"responsive"}
-          />
-        </Link>
-      </div>
+      <Link href="/">
+        <Image
+          src="/movie-finder.png"
+          alt="Logo"
+          width={400}
+          height={40}
+          layout={"responsive"}
+        />
+      </Link>
 
-      <div className={styles.linksContainerStyle}>
+      <div className={`${styles.linksContainerStyle} secondaryText`}>
         <Link href="/" className={`${styles.linkStyle} ${isLinkActive("/")}`}>
           Accueil
         </Link>

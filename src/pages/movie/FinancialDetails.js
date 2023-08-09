@@ -14,7 +14,7 @@ export const FinancialDetails = ({ movieDetails }) => {
     },
     {
       title: "Recettes",
-      value: movieDetails.revenue - movieDetails.budget,
+      value: movieDetails.profit,
     },
   ];
 

@@ -56,7 +56,6 @@ export const MovieListCarousel = ({ movies }) => {
         alt="Right Arrow"
         height={25}
         onClick={handleClickNext}
-        role="button"
       />
     </div>
   );

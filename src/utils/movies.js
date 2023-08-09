@@ -3,7 +3,6 @@ export const formatDate = (date) => {
 };
 
 export const formatMovieDetails = (movieDetails) => {
-  console.log("test");
   return movieDetails.map((movie) => {
     const details = movie.data;
     const formattedReleaseDate = formatDate(details.release_date);

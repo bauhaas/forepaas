@@ -29,7 +29,12 @@ const usePopularMovies = () => {
         );
 
         const movies = formatMovieDetails(moviesDetails);
-        setPopularMovies(movies.slice(0, 10));
+
+        const moviesSortedByPopularity = [...movies].sort(
+          (a, b) => b.popularity - a.popularity
+        );
+
+        setPopularMovies(moviesSortedByPopularity.slice(0, 10));
         dispatch(setMovies(movies));
       } catch (error) {
         console.error("Error fetching popular movies:", error);
